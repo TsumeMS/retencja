@@ -16,6 +16,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
+        $schedule->command('draw:import')->weeklyOn([2, 4, 6], '0:01');
     }
 
     /**
